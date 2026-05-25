@@ -6,8 +6,8 @@ An end-to-end clone of **skribbl.io**, featuring real-time drawing canvas synchr
 
 ## 🚀 Live Demo
 
-* **🎮 Live Application URL:** `[Insert Deployed Live URL Here, e.g., https://skribbl-pictionary.vercel.app]`
-* **📡 WebSocket Backend URL:** `[Insert Deployed Backend URL Here, e.g., https://skribbl-backend.onrender.com]`
+* **🎮 Live Application URL:** [skribbl-clone-three.vercel.app](https://skribbl-clone-three.vercel.app/)
+* **📡 WebSocket Backend URL:** https://skribbl-clone-9n2o.onrender.com
 
 ---
 
