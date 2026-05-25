@@ -1,0 +1,118 @@
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.playerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 2px solid var(--border-cartoon-color);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-out;
+  transition: transform 0.1s ease;
+}
+
+.playerRow:hover {
+  transform: translateX(2px);
+  background: #fdfdfd;
+}
+
+.playerRowDrawing {
+  border-color: var(--accent-secondary);
+  background: #e6f3ff;
+  box-shadow: 0 3px 0 var(--accent-secondary-border);
+}
+
+.playerRowDrawing::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--accent-secondary);
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rank {
+  font-family: var(--font-family-title);
+  font-weight: 900;
+  font-size: 1rem;
+  width: 24px;
+  color: var(--color-text-muted);
+}
+
+.rank1 {
+  color: #d97706; /* Gold */
+}
+
+.rank2 {
+  color: #64748b; /* Silver */
+}
+
+.rank3 {
+  color: #b45309; /* Bronze */
+}
+
+.avatar {
+  font-size: 1.8rem;
+  user-select: none;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.name {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+}
+
+.nameMe {
+  color: var(--accent-secondary);
+}
+
+.score {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: var(--color-text-muted);
+  font-family: var(--font-family-title);
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.indicatorBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+.pencilBadge {
+  background: var(--color-yellow);
+  border: 2px solid var(--border-cartoon-color);
+  color: var(--color-text-main);
+}

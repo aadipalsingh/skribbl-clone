@@ -1,0 +1,111 @@
+.selectorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.previewWrapper {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid var(--border-cartoon-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.previewWrapper:hover {
+  transform: scale(1.05);
+}
+
+.diceBadge {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-yellow);
+  border: 2px solid var(--border-cartoon-color);
+  color: var(--color-text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.15);
+  transition: transform 0.1s ease;
+  user-select: none;
+}
+
+.diceBadge:hover {
+  transform: scale(1.1) rotate(15deg);
+  background: var(--color-yellow-hover);
+}
+
+.diceBadge:active {
+  transform: scale(0.9) rotate(-15deg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+  max-height: 140px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 6px;
+  background: #e5edf5;
+  border: 2px solid var(--border-cartoon-color);
+}
+
+/* Custom Scrollbar for Grid */
+.grid::-webkit-scrollbar {
+  width: 8px;
+}
+.grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+.grid::-webkit-scrollbar-thumb {
+  background: var(--btn-create);
+  border: 2px solid var(--border-cartoon-color);
+  border-radius: 4px;
+}
+.grid::-webkit-scrollbar-thumb:hover {
+  background: var(--border-cartoon-color);
+}
+
+.avatarOption {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  background: #ffffff;
+  border: 2px solid var(--border-cartoon-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  user-select: none;
+}
+
+.avatarOption:hover {
+  transform: scale(1.08);
+  background: #fdfdfd;
+}
+
+.avatarOptionActive {
+  background: var(--color-yellow);
+  border: 2px solid var(--border-cartoon-color);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}

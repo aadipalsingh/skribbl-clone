@@ -1,0 +1,155 @@
+.barContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-card);
+  border: var(--border-cartoon);
+  border-radius: var(--border-radius-cartoon);
+  padding: 0.6rem 1.25rem;
+  width: 100%;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+  gap: 1.5rem;
+}
+
+.centerZone {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+}
+
+.roundInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  font-family: var(--font-family-title);
+}
+
+.roundNumber {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--accent-secondary);
+}
+
+.roundLabel {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Word Select System (For Drawer Choice) */
+.selectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.selectionTitle {
+  font-size: 0.85rem;
+  font-family: var(--font-family-title);
+  color: var(--color-text-main);
+  font-weight: 800;
+}
+
+.wordsRow {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.wordBtn {
+  background: var(--color-yellow);
+  border: 2px solid var(--border-cartoon-color);
+  border-bottom: 5px solid var(--color-yellow-border);
+  color: var(--color-text-main);
+  padding: 0.4rem 1.2rem;
+  border-radius: 6px;
+  font-family: var(--font-family-title);
+  font-weight: 900;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.05s ease, border-bottom-width 0.05s ease;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+}
+
+.wordBtn:hover {
+  background: var(--color-yellow-hover);
+}
+
+.wordBtn:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+/* Blanks Display (For Guessers) */
+.blanksContainer {
+  display: flex;
+  gap: 0.5rem;
+  font-family: var(--font-family-title);
+}
+
+.blankLetter {
+  font-size: 1.6rem;
+  font-weight: 900;
+  width: 24px;
+  text-align: center;
+  border-bottom: 4px solid var(--border-cartoon-color);
+  color: var(--color-text-main);
+  transition: border-color 0.2s ease;
+}
+
+.blankLetterFilled {
+  color: var(--accent-secondary);
+}
+
+.spacePlaceholder {
+  width: 12px;
+  border-bottom: none;
+}
+
+.chosenWordText {
+  font-family: var(--font-family-title);
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--accent-secondary);
+}
+
+.roundEndText {
+  font-family: var(--font-family-title);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--color-success-text);
+}
+
+/* Time Indicator */
+.timeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid var(--border-cartoon-color);
+  font-family: var(--font-family-title);
+  font-weight: 900;
+  font-size: 1.15rem;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.timeUrgent {
+  border-color: #ff3b30;
+  color: #ff3b30;
+  box-shadow: 0 3px 0 #960000;
+  animation: drawPulse 1s infinite ease-in-out;
+}
+
+@keyframes drawPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}

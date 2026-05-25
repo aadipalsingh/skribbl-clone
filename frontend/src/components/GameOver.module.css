@@ -1,0 +1,314 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: var(--bg-card);
+  border: var(--border-cartoon);
+  border-radius: var(--border-radius-cartoon);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2);
+  animation: scaleUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-family: var(--font-family-title);
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+/* PODIUM STYLING */
+.podiumSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+  padding-top: 2rem;
+}
+
+.podiumCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 180px;
+}
+
+.podiumCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.5rem 1rem;
+  background: #ffffff;
+  border: 3px solid var(--border-cartoon-color);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+  transition: transform 0.2s ease;
+  animation-fill-mode: both;
+}
+
+.podiumCard:hover {
+  transform: translateY(-3px);
+}
+
+.podiumAvatar {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+  user-select: none;
+}
+
+.podiumName {
+  font-family: var(--font-family-title);
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--color-text-main);
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.podiumScore {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--color-text-muted);
+}
+
+.medal {
+  font-size: 2.2rem;
+  position: absolute;
+  top: -30px;
+  filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.15));
+  user-select: none;
+}
+
+/* 1st Place (Center - Gold) */
+.place1 {
+  height: 240px;
+  background: #fff4b8;
+  border-color: var(--border-cartoon-color);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+  order: 2; /* Move to center */
+  animation: heightScale1 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.place1 .medal {
+  animation: crownFloat 2.5s infinite ease-in-out;
+}
+
+.place1 .podiumName {
+  color: #d97706;
+  font-size: 1.25rem;
+}
+
+.place1 .podiumScore {
+  color: #b45309;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+/* 2nd Place (Left - Silver) */
+.place2 {
+  height: 180px;
+  background: #e5edf5;
+  border-color: var(--border-cartoon-color);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+  order: 1; /* Move to left */
+  animation: heightScale2 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+/* 3rd Place (Right - Bronze) */
+.place3 {
+  height: 140px;
+  background: #ffdcc5;
+  border-color: var(--border-cartoon-color);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+  order: 3; /* Move to right */
+  animation: heightScale3 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+/* LEADERBOARD LIST */
+.leaderboardSection {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-family-title);
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #e5edf5;
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.listWrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.listWrapper::-webkit-scrollbar-track {
+  background: #e5edf5;
+  border-radius: 4px;
+}
+
+.listWrapper::-webkit-scrollbar-thumb {
+  background: var(--btn-create);
+  border-radius: 4px;
+}
+
+.playerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 2px solid var(--border-cartoon-color);
+  border-radius: 6px;
+  padding: 0.6rem 1.25rem;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.05);
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.rank {
+  font-family: var(--font-family-title);
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  width: 32px;
+}
+
+.rankMe {
+  color: var(--accent-secondary) !important;
+}
+
+.avatar {
+  font-size: 1.5rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-family: var(--font-family-title);
+  font-weight: 800;
+  color: var(--color-text-main);
+}
+
+.nameMe {
+  color: var(--accent-secondary);
+}
+
+.score {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--color-text-main);
+}
+
+/* BUTTONS */
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.actionBtn {
+  background: var(--accent-primary);
+  border: var(--border-cartoon);
+  border-bottom: 5px solid var(--accent-primary-border);
+  color: white;
+  padding: 0.7rem 2rem;
+  border-radius: 6px;
+  font-family: var(--font-family-title);
+  font-weight: 900;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.05s ease, border-bottom-width 0.05s ease;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.actionBtn:hover {
+  background: var(--accent-primary-hover);
+}
+
+.actionBtn:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+/* KEYFRAMES & ANIMATIONS */
+@keyframes scaleUpFade {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes heightScale1 {
+  from { height: 0; opacity: 0; }
+  to { height: 240px; opacity: 1; }
+}
+
+@keyframes heightScale2 {
+  from { height: 0; opacity: 0; }
+  to { height: 180px; opacity: 1; }
+}
+
+@keyframes heightScale3 {
+  from { height: 0; opacity: 0; }
+  to { height: 140px; opacity: 1; }
+}
+
+@keyframes crownFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(3deg);
+  }
+}

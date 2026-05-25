@@ -1,0 +1,138 @@
+.toolboxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e5edf5;
+  border: var(--border-cartoon);
+  border-radius: var(--border-radius-cartoon);
+  padding: 0.75rem 1rem;
+  width: 100%;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.title {
+  font-family: var(--font-family-title);
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--color-text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.colorsGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.35rem;
+}
+
+@media (max-width: 500px) {
+  .colorsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.colorDot {
+  width: 26px;
+  height: 26px;
+  border-radius: 4px; /* Playful squares, exactly like skribbl.io! */
+  border: 2px solid var(--border-cartoon-color);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.colorDot:hover {
+  transform: scale(1.15);
+}
+
+.colorDotActive {
+  transform: scale(1.1);
+  border-color: #ffffff;
+  outline: 2px solid var(--border-cartoon-color);
+}
+
+.sizesRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sizeCircle {
+  background: #ffffff;
+  border: 2px solid var(--border-cartoon-color);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease;
+  width: 32px;
+  height: 32px;
+}
+
+.sizeCircle:hover {
+  background: #f2f4f8;
+  transform: scale(1.05);
+}
+
+.sizeCircleActive {
+  background: var(--color-yellow);
+  border-color: var(--border-cartoon-color);
+  transform: scale(1.05);
+}
+
+.brushIndicator {
+  background: var(--border-cartoon-color);
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.sizeCircleActive .brushIndicator {
+  background: var(--border-cartoon-color);
+}
+
+.actionsRow {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.actionBtn {
+  background: #ffffff;
+  border: 2px solid var(--border-cartoon-color);
+  border-bottom: 4px solid var(--btn-create-border);
+  color: var(--color-text-main);
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  font-family: var(--font-family-title);
+  font-weight: 900;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: transform 0.05s ease, border-bottom-width 0.05s ease;
+}
+
+.actionBtn:hover {
+  background: #f2f4f8;
+}
+
+.actionBtnActive {
+  background: var(--accent-secondary);
+  border-color: var(--border-cartoon-color);
+  border-bottom-color: var(--accent-secondary-border);
+  color: white;
+}
+
+.actionBtn:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}

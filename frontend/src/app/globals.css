@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+:root {
+  /* Color Palette - Skribbl Classic / Cartoon Light Theme */
+  --bg-primary: #163047; /* Authentic dark teal-blue body background */
+  --bg-secondary: #0b1a26;
+  --bg-card: #ffffff; /* Flat white containers */
+  --bg-input: #ffffff;
+  
+  --color-text-main: #182c3d; /* Dark navy text inside cards */
+  --color-text-muted: #5d7d9a; /* Muted steel blue for hints */
+  
+  /* Bold Outline Border Styles */
+  --border-cartoon-width: 3px;
+  --border-cartoon-color: #182c3d;
+  --border-cartoon: var(--border-cartoon-width) solid var(--border-cartoon-color);
+  --border-radius-cartoon: 8px;
+  
+  /* Action Button Colors (Flat with 3D bottom borders) */
+  --accent-primary: #55b000; /* Play green */
+  --accent-primary-hover: #5fc400;
+  --accent-primary-border: #367200;
+  
+  --accent-secondary: #007ad0; /* Action blue */
+  --accent-secondary-hover: #008ae9;
+  --accent-secondary-border: #00599a;
+
+  --btn-create: #4b6b88; /* Grayish blue create/lobby button */
+  --btn-create-hover: #587d9f;
+  --btn-create-border: #314b60;
+
+  /* Playful Yellow accents */
+  --color-yellow: #ffcc00;
+  --color-yellow-hover: #ffd93a;
+  --color-yellow-border: #c89e00;
+  
+  /* Status Colors (Flat Cartoon Tones) */
+  --color-success: #abffab; /* Light green bg for correct guess */
+  --color-success-text: #007000;
+  --color-warning: #fff4b8; /* Light yellow bg for close guess */
+  --color-warning-text: #825e00;
+  --color-danger: #ffc5c5; /* Light red bg for leave alerts */
+  --color-danger-text: #960000;
+  
+  /* Font Families */
+  --font-family-title: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-body: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-primary);
+  color: var(--color-text-main);
+  font-family: var(--font-family-body);
+  font-weight: 700; /* Chunky weight by default */
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar to Match Comic Theme */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5edf5;
+  border-left: var(--border-cartoon);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--btn-create);
+  border: var(--border-cartoon);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-cartoon-color);
+}
+
+/* Skribbl Retro Cartoon Logo Styling */
+.skribbl-logo {
+  font-family: var(--font-family-title);
+  font-weight: 900;
+  font-size: 3.8rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  text-transform: lowercase;
+  filter: drop-shadow(4px 4px 0px #0b1a26);
+  margin-bottom: 0.5rem;
+  user-select: none;
+}
+
+.skribbl-logo span {
+  display: inline-block;
+  transform: rotate(var(--rot, 0deg));
+}
+
+.skribbl-logo span:nth-child(1) { color: #007ad0; --rot: -5deg; }
+.skribbl-logo span:nth-child(2) { color: #ff3b30; --rot: 4deg; }
+.skribbl-logo span:nth-child(3) { color: #4cd964; --rot: -2deg; }
+.skribbl-logo span:nth-child(4) { color: #ffcc00; --rot: 6deg; }
+.skribbl-logo span:nth-child(5) { color: #ff9500; --rot: -4deg; }
+.skribbl-logo span:nth-child(6) { color: #5856d6; --rot: 3deg; }
+.skribbl-logo span:nth-child(7) { color: #5ac8fa; --rot: -6deg; }
+.skribbl-logo span:nth-child(8) { color: #ffffff; --rot: 0deg; }
+.skribbl-logo span:nth-child(9) { color: #007ad0; --rot: 4deg; }
+.skribbl-logo span:nth-child(10) { color: #ff3b30; --rot: -3deg; }
+
+/* Flat animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes buttonPress {
+  0% { transform: translateY(0); border-bottom-width: 6px; }
+  100% { transform: translateY(3px); border-bottom-width: 3px; }
+}

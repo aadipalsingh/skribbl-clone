@@ -1,0 +1,86 @@
+.roomLayoutContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1300px;
+  padding: 1.5rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  z-index: 10;
+}
+
+.topBarRow {
+  width: 100%;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.gridDashboard {
+  display: grid;
+  grid-template-columns: 280px 1fr 340px;
+  gap: 1.5rem;
+  align-items: start;
+  flex: 1;
+  width: 100%;
+  animation: fadeIn 0.4s ease-out 0.1s;
+  animation-fill-mode: both;
+}
+
+/* Middle core column containing Canvas & Toolbox */
+.centerDrawColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .gridDashboard {
+    grid-template-columns: 240px 1fr;
+  }
+  /* On medium screens, wrap the chat to full width below */
+  .gridDashboard > *:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridDashboard {
+    grid-template-columns: 1fr;
+  }
+  .gridDashboard > * {
+    grid-column: span 1 !important;
+  }
+}
+
+/* Flat Comic Panel Wrapper */
+.panelCard {
+  background: var(--bg-card);
+  border: var(--border-cartoon);
+  border-radius: var(--border-radius-cartoon);
+  padding: 1.25rem;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.panelTitle {
+  font-family: var(--font-family-title);
+  font-size: 1.15rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--color-text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #e5edf5;
+}
+
+/* Direct Join Overlay Style */
+.joinOverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}

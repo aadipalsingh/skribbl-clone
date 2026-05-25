@@ -1,0 +1,25 @@
+{
+  "animals": [
+    "dog", "cat", "elephant", "giraffe", "monkey", "lion", "tiger", "bear", 
+    "rabbit", "dolphin", "whale", "penguin", "frog", "snake", "kangaroo", "dinosaur"
+  ],
+  "objects": [
+    "apple", "chair", "computer", "rocket", "airplane", "bicycle", "house", 
+    "castle", "snowman", "pizza", "cupcake", "guitar", "clock", "umbrella", "backpack", "hammer"
+  ],
+  "actions": [
+    "running", "painting", "jumping", "singing", "drawing", "swimming", "sleeping",
+    "dancing", "flying", "climbing", "cooking", "driving", "laughing", "writing"
+  ],
+  "combinations": [
+    "sunflower", "pancake", "raincoat", "sandcastle", "skateboard", "starfish", 
+    "toothbrush", "keyboard", "dragonfly", "jellyfish", "watermelon", "basketball", 
+    "butterfly", "cupcake", "backpack", "snowman", "hotdog", "earthquake", "lighthouse", 
+    "rainbow", "spaceship", "football", "ladybug", "pineapple", "horseshoe"
+  ],
+  "hidden": [
+    "wind", "shadow", "gravity", "nightmare", "portal", "dream", "silence", 
+    "universe", "time travel", "electricity", "oxygen", "dizziness", "whisper", 
+    "internet", "memory", "illusion", "echo", "fog", "reflection", "skeleton"
+  ]
+}

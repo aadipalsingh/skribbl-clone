@@ -1,0 +1,141 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 350px;
+  background: var(--bg-card);
+  border: var(--border-cartoon);
+  border-radius: var(--border-radius-cartoon);
+  overflow: hidden;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+}
+
+.chatHeader {
+  padding: 0.8rem 1rem;
+  background: #e5edf5;
+  border-bottom: var(--border-cartoon);
+  font-family: var(--font-family-title);
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-text-main);
+}
+
+.headerTitle {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.messagesList {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.messageRow {
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.systemMessage {
+  align-self: center;
+  background: var(--color-warning);
+  border: 2px solid var(--border-cartoon-color);
+  color: var(--color-warning-text);
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  margin: 0.25rem 0;
+  text-align: center;
+  font-weight: 800;
+}
+
+.userMessageBubble {
+  align-self: flex-start;
+  max-width: 85%;
+  background: #e5edf5;
+  border: 2px solid var(--border-cartoon-color);
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px 8px 8px 2px;
+  font-weight: 800;
+  color: var(--color-text-main);
+}
+
+.myMessageBubble {
+  align-self: flex-end;
+  max-width: 85%;
+  background: #cce6ff;
+  border: 2px solid var(--border-cartoon-color);
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px 8px 2px 8px;
+  font-weight: 800;
+  color: var(--color-text-main);
+}
+
+.senderName {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent-secondary);
+  margin-bottom: 0.2rem;
+}
+
+.messageText {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.inputForm {
+  display: flex;
+  padding: 0.75rem;
+  background: #e5edf5;
+  border-top: var(--border-cartoon);
+  gap: 0.5rem;
+}
+
+.inputField {
+  flex: 1;
+  background: #ffffff;
+  border: var(--border-cartoon);
+  color: var(--color-text-main);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-family: var(--font-family-body);
+  font-size: 0.95rem;
+  font-weight: 800;
+  outline: none;
+}
+
+.inputField:focus {
+  border-color: var(--accent-secondary);
+}
+
+.sendButton {
+  background: var(--accent-secondary);
+  border: var(--border-cartoon);
+  border-bottom: 5px solid var(--accent-secondary-border);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-family: var(--font-family-title);
+  font-weight: 900;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, border-bottom-width 0.1s ease;
+}
+
+.sendButton:hover {
+  background: var(--accent-secondary-hover);
+}
+
+.sendButton:active {
+  transform: translateY(2px);
+  border-bottom-width: 3px;
+}
